@@ -1,0 +1,48 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+	version="2.1">
+	<persistence-unit name="gotPU"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>br.edu.unifei.ecoe18.got.modelo.Bastardo</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Batalha</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Casa</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Castelo</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Cavaleiro</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Cavalo</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Cidade</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Construcao</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Continente</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Criatura</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Dragao</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Fortaleza</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Grupo</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Guerra</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Humano</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Lorde</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Meistre</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Muralha</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Nobre</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Outro</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Patrulheiro</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Plebeu</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Regiao</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Rei</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Ser</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Titulo</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Transformacao</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Unidade</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Vila</class>
+		<class>br.edu.unifei.ecoe18.got.modelo.Wight</class>
+		<properties>
+			<property name="javax.persistence.jdbc.url"	value="jdbc:mysql://localhost:3306/got?zeroDateTimeBehavior=convertToNull" />
+			<property name="javax.persistence.jdbc.user" value="got" />
+			<property name="javax.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.password" value="got" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MariaDBDialect" />
+			<property name="javax.persistence.schema-generation.database.action" value="none" />
+		</properties>
+	</persistence-unit>
+</persistence>

@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<h:outputStylesheet library="css" name="main-page.css" />
+	<link rel="shortcut icon" type="image/x-icon" href="#{resource['img/favicon.ico']}" />
+	<title><ui:insert name="title">Game of Thrones JSF CRUD</ui:insert></title>
+</h:head>
+
+
+<h:body>
+	<f:view>
+		<h:graphicImage library="img" name="got-map.jpg" class="bg" />
+		<div id="wrapper">
+			<div id="page-wrap">
+				<p>
+					<h:button class="button"
+						action="main-page.xhtml" value="Home" />
+				</p>
+				<p>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='bastardo/menu.xhtml'"
+							value="Bastardo" />
+							<div class="dropdown-content">
+					    		<a href="">Inserir</a>
+					    		<a href="">Alterar</a>
+					    		<a href="">Excluir</a>
+					    		<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='batalha/menu.xhtml'"
+							value="Batalha" />
+							<div class="dropdown-content">
+					    		<a href="/got/batalha/inserir.xhtml">Inserir</a>
+					    		<a href="/got/batalha/buscar.xhtml">Alterar</a>
+					    		<a href="/got/batalha/buscar.xhtml">Excluir</a>
+					    		<a href="/got/batalha/buscar.xhtml">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='casa/menu.xhtml'"
+							value="Casa" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='castelo/menu.xhtml'"
+							value="Castelo" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='cavaleiro/menu.xhtml'"
+							value="Cavaleiro" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='cavalo/menu.xhtml'"
+							value="Cavalo" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='cidade/menu.xhtml'"
+							value="Cidade" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='continente/menu.xhtml'"
+							value="Continente" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='dragao/menu.xhtml'"
+							value="Dragão" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='fortaleza/menu.xhtml'"
+							value="Fortaleza" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='grupo/menu.xhtml'"
+							value="Guerra" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='humano/menu.xhtml'"
+							value="Humano" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='lorde/menu.xhtml'"
+							value="Lorde" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='meistre/menu.xhtml'"
+							value="Meistre" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='muralha/menu.xhtml'"
+							value="Muralha" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='nobre/menu.xhtml'"
+							value="Nobre" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='outro/menu.xhtml'"
+							value="Outro" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='patrulheiro/menu.xhtml'"
+							value="Patrulheiro" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='plebeu/menu.xhtml'"
+							value="Plebeu" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='regiao/menu.xhtml'"
+							value="Região" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='rei/menu.xhtml'"
+							value="Rei" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='vila/menu.xhtml'"
+							value="Vila" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					<p/>
+						<div class = "dropdown">
+						<h:button class="button"
+							onclick="window.location.href='wight/menu.xhtml'"
+							value="Wight" />
+							<div class="dropdown-content">
+					    	<a href="">Inserir</a>
+					    	<a href="">Alterar</a>
+					    	<a href="">Excluir</a>
+					    	<a href="">Consultar</a>
+							</div>
+						</div>
+					
+				</p>
+			</div>
+
+			<div id="page-content">
+				<ui:insert name="page-content"></ui:insert>
+			</div>
+
+		</div>
+	</f:view>
+</h:body>
+
+</html>

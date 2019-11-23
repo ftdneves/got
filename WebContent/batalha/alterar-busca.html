@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="../css/main-page.css">
+<link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico" />
+<title>Game of Thrones JSP CRUD</title>
+</head>
+<body>
+<img src="../img/got-map.jpg" class="bg">
+<div id="wrapper">
+<div id="page-wrap">
+<P>
+<button class="button" 
+	onclick="window.location.href='../main-page.html'">Home</button>		
+</P>
+<P>
+<button class="button" 
+	onclick="window.location.href='../create-db.jsp'">Criar Banco</button>		
+</P>
+<div class="dropdown">
+<button class="button" 
+	onclick="window.location.href='menu.html'">Batalha</button>		
+	<div class="dropdown-content">
+    	<a href="inserir-form.html">Inserir</a>
+    	<a href="alterar-busca.html">Alterar</a>
+    	<a href="excluir-busca.html">Excluir</a>
+    	<a href="consultar-busca.html">Consultar</a>
+  	</div>
+</div>
+
+</div>
+
+<div id="page-content">
+	<div class="box">
+	<form action="alterar-form.jsp">
+		 <a class="main-form">Data:</a> <br>
+		 <input type="text" name="data"
+			size="25"/><br>
+		<p><input type="submit" value="Buscar" class="button"/></p>
+	</form>
+	</div>
+</div>
+
+</div>
+</body>
+</html>
