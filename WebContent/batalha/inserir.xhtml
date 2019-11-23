@@ -17,6 +17,14 @@
 		  <h:inputText value="#{batalhaBean.batalha.local}" size="25"/><br/>
 		<a class="main-form">Resultado:</a> <br/> 
 		  <h:inputText value="#{batalhaBean.batalha.resultado}" size="25"/><br/>
+		<a class="main-form">Vencedor:</a> <br/> 
+		  <h:selectOneMenu value="#{batalhaBean.batalha.vencedor}" disabled="true">
+		  	<f:selectItems value="#{batalhaBean.grupos}" var="g" itemValue="#{g}" itemLabel="#{g.codigo}"/>
+		  </h:selectOneMenu> <br/>  
+		<a class="main-form">Grupos:</a> <br/> 
+		  <h:selectManyCheckbox value="#{batalhaBean.batalha.grupos}" disabled="true">
+		  	<f:selectItems value="#{batalhaBean.grupos}" var="g" itemValue="#{g}" itemLabel="#{g.codigo}"/>
+		  </h:selectManyCheckbox> <br/>
 		<p><h:commandButton value="Inserir" class="button" action="#{batalhaBean.inserir}"/></p>
 		<p><h:messages/></p>
 	</div>	

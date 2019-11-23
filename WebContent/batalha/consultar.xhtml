@@ -7,18 +7,25 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <ui:composition template="../template.xhtml">
-	<ui:define name="title">CRUD Batalha - Inserir</ui:define>
+	<ui:define name="title">CRUD Batalha - Consultar</ui:define>
 	<ui:define name="page-content">
 	<h:form>
 	<div class="box">
 		<a class="main-form">Data:</a> <br/>
-		 <h:inputText value="#{batalhaBean.batalha.data}" size="25"/><br/>
+		 <h:inputText value="#{batalhaBean.batalha.data}" readonly="true"/><br/>
 		<a class="main-form">Local:</a> <br/> 
-		  <h:inputText value="#{batalhaBean.batalha.local}" size="25"/><br/>
+		  <h:inputText value="#{batalhaBean.batalha.local}" readonly="true"/><br/>
 		<a class="main-form">Resultado:</a> <br/> 
-		  <h:inputText value="#{batalhaBean.batalha.resultado}" size="25"/><br/>
-		<p><h:commandButton value="Inserir" class="button" action="#{batalhaBean.inserir}"/></p>
-		<p><h:messages/></p>
+		  <h:inputText value="#{batalhaBean.batalha.resultado}" readonly="true"/><br/>
+		<a class="main-form">Vencedor:</a> <br/> 
+		  <h:selectOneMenu value="#{batalhaBean.batalha.vencedor}" disabled="true">
+		  	<f:selectItems value="#{batalhaBean.grupos}" var="g" itemValue="#{g}" itemLabel="#{g.codigo}"/>
+		  </h:selectOneMenu> <br/>  
+		<a class="main-form">Grupos:</a> <br/> 
+		  <h:selectManyCheckbox value="#{batalhaBean.batalha.grupos}" disabled="true">
+		  	<f:selectItems value="#{batalhaBean.grupos}" var="g" itemValue="#{g}" itemLabel="#{g.codigo}"/>
+		  </h:selectManyCheckbox> <br/>
+		<p><h:commandButton value="Home" class="button" action="#{batalhaBean.consultar}"/></p>
 	</div>	
 	</h:form>
 	</ui:define>	
