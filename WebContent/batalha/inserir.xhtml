@@ -19,12 +19,12 @@
 		  <h:inputText value="#{batalhaBean.batalha.resultado}" size="25"/><br/>
 		<a class="main-form">Vencedor:</a> <br/> 
 		  <h:selectOneMenu value="#{batalhaBean.batalha.vencedor}" >
-		  	<f:selectItems value="#{batalhaBean.grupos}" var="g" itemValue="#{g}" itemLabel="#{g.codigo}"/>
+		  	<f:selectItems value="#{batalhaBean.codigosGrupos}"/>
 		  </h:selectOneMenu> <br/>  
-		<a class="main-form">Grupos:</a> <br/> 
-		  <h:selectManyCheckbox value="#{batalhaBean.batalha.grupos}" >
-		  	<f:selectItems value="#{batalhaBean.grupos}" var="g" itemValue="#{g}" itemLabel="#{g.codigo}"/>
-		  </h:selectManyCheckbox> <br/>
+<!-- 		<a class="main-form">Grupos:</a> <br/>  -->
+<!-- 		  <h:selectManyCheckbox value="#{batalhaBean.batalha.grupos}" > -->
+<!-- 		  	<f:selectItems value="#{batalhaBean.grupos}" var="g" itemValue="#{g}" itemLabel="#{g.codigo}"/> -->
+<!-- 		  </h:selectManyCheckbox> <br/> -->
 		<p><h:commandButton value="Inserir" class="button" action="#{batalhaBean.inserir}"/></p>
 		<p><h:messages/></p>
 	</div>	

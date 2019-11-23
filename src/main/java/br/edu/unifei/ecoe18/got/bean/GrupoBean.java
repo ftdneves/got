@@ -1,6 +1,7 @@
 package br.edu.unifei.ecoe18.got.bean;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;

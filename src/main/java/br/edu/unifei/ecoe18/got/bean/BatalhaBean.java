@@ -23,6 +23,7 @@ public class BatalhaBean implements Serializable{
 	private BatalhaDAO batalhaDAO = new BatalhaDAO();
 	private GrupoDAO grupoDAO = new GrupoDAO();
 	private Grupo vencedor = new Grupo();
+	private List<String> codigosGrupos = grupoDAO.codigos();
 	private List<Grupo> grupos = grupoDAO.findAll();
 	
 	public String inserir() {
@@ -30,7 +31,7 @@ public class BatalhaBean implements Serializable{
 			batalhaDAO.create(batalha);
 		}catch (Exception e) {
 			FacesContext facesContext = FacesContext.getCurrentInstance();
-			facesContext.addMessage(null, new FacesMessage("Já existe essa data!"));
+			facesContext.addMessage(null, new FacesMessage(e.toString()));
 			return "inserir";
 		}
 		return "/main-page";
