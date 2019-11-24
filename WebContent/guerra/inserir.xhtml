@@ -18,6 +18,7 @@
 		 <h:inputText value="#{guerraBean.guerra.resultado}" size="25"/><br/>
 		<a class="main-form">Vitorioso:</a> <br/> 
 		  <p:selectOneMenu value="#{guerraBean.grupoVitorioso}" >
+            <f:selectItem itemLabel="Select One" itemValue="" />
 		  	<f:selectItems value="#{guerraBean.grupos}" var="g" itemValue="#{g.codigo}" itemLabel="#{g.motivacao}"/>
 		  </p:selectOneMenu> <br/>  
 		<a class="main-form">Batalhas:</a> <br/> 

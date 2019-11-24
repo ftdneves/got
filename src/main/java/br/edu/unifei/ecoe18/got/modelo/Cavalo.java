@@ -1,9 +1,7 @@
 package br.edu.unifei.ecoe18.got.modelo;
 
 import java.io.Serializable;
-import java.util.List;
 
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -24,8 +22,7 @@ public class Cavalo extends Criatura implements Serializable{
 	@Enumerated(EnumType.STRING)
 	private RacaCavaloEnum raca;
 	private String uso;
-	@ElementCollection(targetClass = String.class)
-	private List<String> caracteristicas;
+	private String caracteristicas;
 	@Enumerated(EnumType.STRING)
 	private CapacidadeReproducaoEnum capacidadeReproducao;
 	@OneToOne

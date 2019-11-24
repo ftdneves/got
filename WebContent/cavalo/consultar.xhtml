@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="../template.xhtml">
+	<ui:define name="title">CRUD Cavalo - Inserir</ui:define>
+	<ui:define name="page-content">
+	<h:form>
+	<div class="box">
+		<a class="main-form">Nome:</a> <br/>
+		 <h:inputText value="#{cavaloBean.cavalo.nome}" size="25" readonly="true"/><br/>
+		 <h:inputHidden value="#{cavaloBean.cavalo.nome}"/>
+		<a class="main-form">Nascimento:</a> <br/>
+		 <h:inputText value="#{cavaloBean.cavalo.nascimento}" size="25" readonly="true"/><br/>
+		<a class="main-form">Está morto?</a> <br/>
+		 <h:inputText value="#{cavaloBean.cavalo.morto}"  readonly="true"/><br/>
+		<a class="main-form">Classe:</a> <br/>
+		 <h:inputText value="#{cavaloBean.cavalo.classe}" size="25"  readonly="true"/><br/>
+		<a class="main-form">Uso:</a> <br/>
+		 <h:inputText value="#{cavaloBean.cavalo.uso}" size="25" readonly="true"/><br/>
+		<a class="main-form">Caracteristicas:</a> <br/>
+		 <h:inputText value="#{cavaloBean.cavalo.caracteristicas}" size="25" readonly="true"/><br/>
+		<a class="main-form">Raça:</a> <br/> 
+		  <h:inputText value="#{cavaloBean.cavalo.raca}" size="25"   readonly="true"/> <br/>
+		<a class="main-form">Capacidade de Reprodução:</a> <br/> 
+		  <h:inputText value="#{cavaloBean.cavalo.capacidadeReproducao}" size="25"  readonly="true"/> <br/>
+		<a class="main-form">Cavaleiro:</a> <br/> 
+		  <h:inputText value="#{cavaloBean.cavalo.cavaleiro}" size="25"  readonly="true"/> <br/> 
+		<a class="main-form">Transformacao:</a> <br/> 
+		  <h:inputText value="#{cavaloBean.cavalo.transformacao}" size="25"  readonly="true"/> <br/>  
+		<p><h:commandButton value="Home" class="button" action="#{cavaloBean.consultar}"/></p>
+		<p><h:messages/></p>
+	</div>	
+	</h:form>
+	</ui:define>	
+</ui:composition>
+</html>

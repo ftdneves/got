@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="../template.xhtml">
+	<ui:define name="title">CRUD Cavalo - Alterar</ui:define>
+	<ui:define name="page-content">
+	<h:form>
+	<div class="box">
+		<a class="main-form">Nome:</a> <br/>
+		 <h:inputText value="#{cavaloBean.cavalo.nome}" size="25" readonly="true"/><br/>
+		 <h:inputHidden value="#{cavaloBean.cavalo.nome}"/>
+		<a class="main-form">Nascimento:</a> <br/>
+		 <h:inputText value="#{cavaloBean.cavalo.nascimento}" size="25"/><br/>
+		<a class="main-form">Está morto?</a> <br/>
+		 <p:selectBooleanCheckbox value="#{cavaloBean.cavalo.morto}" /><br/>
+		<a class="main-form">Classe:</a> <br/>
+		 <h:inputText value="#{cavaloBean.cavalo.classe}" size="25"/><br/>
+		<a class="main-form">Uso:</a> <br/>
+		 <h:inputText value="#{cavaloBean.cavalo.uso}" size="25"/><br/>
+		<a class="main-form">Caracteristicas:</a> <br/>
+		 <h:inputText value="#{cavaloBean.cavalo.caracteristicas}" size="25"/><br/>
+		<a class="main-form">Raça:</a> <br/> 
+		  <p:selectOneMenu value="#{cavaloBean.cavalo.raca}" >
+            <f:selectItem itemLabel="Select One" itemValue="" />
+		  	<f:selectItems value="#{cavaloBean.racas}"/>
+		  </p:selectOneMenu> <br/>
+		<a class="main-form">Capacidade de Reprodução:</a> <br/> 
+		  <p:selectOneMenu value="#{cavaloBean.cavalo.capacidadeReproducao}" >
+            <f:selectItem itemLabel="Select One" itemValue="" />
+		  	<f:selectItems value="#{cavaloBean.capacidades}" />
+		  </p:selectOneMenu> <br/> 
+		<a class="main-form">Cavaleiro:</a> <br/> 
+		  <p:selectOneMenu value="#{cavaloBean.cavaleiro}" >
+            <f:selectItem itemLabel="Select One" itemValue="" />
+		  	<f:selectItems value="#{cavaloBean.humanos}" var="h" itemValue="#{h.nome}" itemLabel="#{h.nome}"/>
+		  </p:selectOneMenu> <br/>  
+		<a class="main-form">Transformacao:</a> <br/> 
+		  <p:selectOneMenu value="#{cavaloBean.transformacao}" >
+            <f:selectItem itemLabel="Select One" itemValue="" />
+		  	<f:selectItems value="#{cavaloBean.transformacoes}" var="h" itemValue="#{h.nome}" itemLabel="#{h.nome}"/>
+		  </p:selectOneMenu> <br/>  
+		<p><h:commandButton value="Alterar" class="button" action="#{cavaloBean.alterar}"/></p>
+		<p><h:messages/></p>
+	</div>	
+	</h:form>
+	</ui:define>	
+</ui:composition>
+</html>

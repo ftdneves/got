@@ -1,5 +1,7 @@
 package br.edu.unifei.ecoe18.got.dao;
 
-public class TituloDAO extends AbstractDAO {
+import br.edu.unifei.ecoe18.got.modelo.Titulo;
+
+public class TituloDAO extends AbstractDAO<Titulo,Integer> {
 
 }

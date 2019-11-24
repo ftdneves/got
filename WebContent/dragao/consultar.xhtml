@@ -8,19 +8,29 @@
 	xmlns:p="http://primefaces.org/ui">
 
 <ui:composition template="../template.xhtml">
-	<ui:define name="title">CRUD Grupo - Inserir</ui:define>
+	<ui:define name="title">CRUD Dragão - Inserir</ui:define>
 	<ui:define name="page-content">
 	<h:form>
 	<div class="box">
-		<a class="main-form">Código:</a> <br/>
-		 <h:inputText value="#{grupoBean.grupo.codigo}" size="25" readonly="true"/><br/>
-		<a class="main-form">Motivação:</a> <br/>
-		 <h:inputText value="#{grupoBean.grupo.motivacao}" size="25" readonly="true"/><br/>
-		<a class="main-form">Seres:</a> <br/> 
-		  <ui:repeat var="s" value="#{grupoBean.grupo.seres}" >
-			<h:inputText value="#{s.nome}" readonly="true"/><br/> 
-   		  </ui:repeat>
-		<p><h:commandButton value="Home" class="button" action="#{grupoBean.consultar}"/></p>
+		<a class="main-form">Nome:</a> <br/>
+		 <h:inputText value="#{dragaoBean.dragao.nome}" size="25" readonly="true"/><br/>
+		<a class="main-form">Nascimento:</a> <br/>
+		 <h:inputText value="#{dragaoBean.dragao.nascimento}" size="25" readonly="true"/><br/>
+		<a class="main-form">Está morto?</a> <br/>
+		 <h:inputText value="#{dragaoBean.dragao.morto}"  readonly="true"/><br/>
+		<a class="main-form">Classe:</a> <br/>
+		 <h:inputText value="#{dragaoBean.dragao.classe}" size="25" readonly="true"/><br/>
+		<a class="main-form">Chifres:</a> <br/>
+		 <h:inputText value="#{dragaoBean.dragao.chifres}" size="25" readonly="true"/><br/>
+		<a class="main-form">Escamas:</a> <br/>
+		 <h:inputText value="#{dragaoBean.dragao.escamas}" size="25" readonly="true"/><br/>
+		<a class="main-form">Fogo:</a> <br/>
+		 <h:inputText value="#{dragaoBean.dragao.fogo}" size="25" readonly="true"/><br/>
+		<a class="main-form">Draconiano:</a> <br/> 
+		  <h:inputText value="#{dragaoBean.draconiano}" size="25" readonly="true"/><br/>
+		<a class="main-form">Transformacao:</a> <br/> 
+		  <h:inputText value="#{dragaoBean.transformacao}" size="25" readonly="true"/> <br/>  
+		<p><h:commandButton value="Home" class="button" action="#{dragaoBean.consultar}"/></p>
 		<p><h:messages/></p>
 	</div>	
 	</h:form>

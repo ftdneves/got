@@ -28,10 +28,12 @@
 		 <h:inputText value="#{dragaoBean.dragao.fogo}" size="25"/><br/>
 		<a class="main-form">Draconiano:</a> <br/> 
 		  <p:selectOneMenu value="#{dragaoBean.draconiano}" >
+            <f:selectItem itemLabel="Select One" itemValue="" />
 		  	<f:selectItems value="#{dragaoBean.humanos}" var="h" itemValue="#{h.nome}" itemLabel="#{h.nome}"/>
 		  </p:selectOneMenu> <br/>  
 		<a class="main-form">Transformacao:</a> <br/> 
 		  <p:selectOneMenu value="#{dragaoBean.transformacao}" >
+            <f:selectItem itemLabel="Select One" itemValue="" />
 		  	<f:selectItems value="#{dragaoBean.transformacoes}" var="h" itemValue="#{h.nome}" itemLabel="#{h.nome}"/>
 		  </p:selectOneMenu> <br/>  
 		<p><h:commandButton value="Inserir" class="button" action="#{dragaoBean.inserir}"/></p>

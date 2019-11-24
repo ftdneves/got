@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="../template.xhtml">
+	<ui:define name="title">CRUD Humano - Excluir</ui:define>
+	<ui:define name="page-content">
+	<h:form>
+	<div class="box">
+		<a class="main-form">Nome:</a> <br/>
+		 <h:inputText value="#{humanoBean.humano.nome}" size="25" readonly="true"/><br/>
+		 <h:inputHidden value="#{humanoBean.humano.nome}"/>
+		<a class="main-form">Nascimento:</a> <br/>
+		 <h:inputText value="#{humanoBean.humano.nascimento}" size="25"  readonly="true"/><br/>
+		<a class="main-form">Está morto?</a> <br/>
+		 <h:inputText value="#{humanoBean.humano.morto}" size="25"  readonly="true"/><br/>
+		<a class="main-form">Apelido:</a> <br/>
+		 <h:inputText value="#{humanoBean.humano.apelido}" size="25" readonly="true"/><br/>
+		<a class="main-form">Pai:</a> <br/> 
+		 <h:inputText value="#{humanoBean.humano.pai}" size="25" readonly="true"/><br/>  
+		<a class="main-form">Mae:</a> <br/> 
+		 <h:inputText value="#{humanoBean.humano.mae}" size="25" readonly="true"/><br/>
+		<a class="main-form">Dragao:</a> <br/> 
+		 <h:inputText value="#{humanoBean.humano.dragao}" size="25" readonly="true"/><br/>
+		<a class="main-form">Cavalo:</a> <br/> 
+		 <h:inputText value="#{humanoBean.humano.cavalo}" size="25" readonly="true"/><br/>
+		<a class="main-form">Transformacao:</a> <br/> 
+		 <h:inputText value="#{humanoBean.humano.transformacao}" size="25" readonly="true"/><br/>  
+		<p><h:commandButton value="Excluir" class="button" action="#{humanoBean.excluir}"/></p>
+		<p><h:messages/></p>
+	</div>	
+	</h:form>
+	</ui:define>	
+</ui:composition>
+</html>

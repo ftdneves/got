@@ -20,6 +20,7 @@
 		  <h:inputText value="#{batalhaBean.batalha.resultado}" size="25"/><br/>
 		<a class="main-form">Vencedor:</a> <br/> 
 		  <p:selectOneMenu value="#{batalhaBean.grupoVencedor}" >
+            <f:selectItem itemLabel="Select One" itemValue="" />
 		  	<f:selectItems value="#{batalhaBean.grupos}" var="g" itemValue="#{g.codigo}" itemLabel="#{g.motivacao}"/>
 		  </p:selectOneMenu> <br/>  
 		<a class="main-form">Grupos:</a> <br/> 
