@@ -1,5 +1,7 @@
 package br.edu.unifei.ecoe18.got.dao;
 
-public class TransformacaoDAO extends AbstractDAO {
+import br.edu.unifei.ecoe18.got.modelo.Transformacao;
+
+public class TransformacaoDAO extends AbstractDAO<Transformacao, String> {
 
 }

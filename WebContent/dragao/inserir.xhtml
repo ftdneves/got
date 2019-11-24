@@ -8,17 +8,23 @@
 	xmlns:p="http://primefaces.org/ui">
 
 <ui:composition template="../template.xhtml">
-	<ui:define name="title">CRUD Grupo - Inserir</ui:define>
+	<ui:define name="title">CRUD Dragão - Inserir</ui:define>
 	<ui:define name="page-content">
 	<h:form>
 	<div class="box">
-		<a class="main-form">Motivação:</a> <br/>
-		 <h:inputText value="#{grupoBean.grupo.motivacao}" size="25"/><br/>
+		<a class="main-form">Nome:</a> <br/>
+		 <h:inputText value="#{dragaoBean.dragao.nome}" size="25"/><br/>
+		<a class="main-form">Nascimento:</a> <br/>
+		 <h:inputText value="#{dragaoBean.dragao.nascimento}" size="25"/><br/>
+		<a class="main-form">Está morto?</a> <br/>
+		 <p:selectBooleanCheckbox value="#{dragaoBean.dragao.morto}" /><br/>
+		<a class="main-form">Nome:</a> <br/>
+		 <h:inputText value="#{dragaoBean.dragao.nome}" size="25"/><br/>
 		<a class="main-form">Seres:</a> <br/> 
-		  <p:selectCheckboxMenu value="#{grupoBean.grupo.seres}" multiple="true" filter="true" filterMatchMode="startsWith">
-		  	<f:selectItems value="#{grupoBean.seres}" var="g" itemValue="#{g}" itemLabel="#{g.motivacao}"/>
+		  <p:selectCheckboxMenu value="#{dragaoBean.dragao.seres}" multiple="true" filter="true" filterMatchMode="startsWith">
+		  	<f:selectItems value="#{dragaoBean.seres}" var="g" itemValue="#{g}" itemLabel="#{g.motivacao}"/>
 		  </p:selectCheckboxMenu> <br/>
-		<p><h:commandButton value="Inserir" class="button" action="#{grupoBean.inserir}"/></p>
+		<p><h:commandButton value="Inserir" class="button" action="#{dragaoBean.inserir}"/></p>
 		<p><h:messages/></p>
 	</div>	
 	</h:form>

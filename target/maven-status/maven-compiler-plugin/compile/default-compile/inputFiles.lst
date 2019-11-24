@@ -1,6 +1,7 @@
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\modelo\Guerra.java
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\dao\FortalezaDAO.java
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\dao\MeistreDAO.java
+D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\bean\DragaoBean.java
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\dao\DragaoDAO.java
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\dao\TransformacaoDAO.java
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\dao\CasteloDAO.java
@@ -32,6 +33,7 @@ D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\dao\PatrulheiroDAO.java
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\dao\HumanoDAO.java
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\dao\GuerraDAO.java
+D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\bean\GuerraBean.java
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\dao\VilaDAO.java
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\modelo\Transformacao.java
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\modelo\Casa.java

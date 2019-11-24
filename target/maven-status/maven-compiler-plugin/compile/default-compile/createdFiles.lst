@@ -41,10 +41,12 @@ br\edu\unifei\ecoe18\got\modelo\Patrulheiro.class
 br\edu\unifei\ecoe18\got\dao\ConstrucaoDAO.class
 br\edu\unifei\ecoe18\got\dao\DragaoDAO.class
 br\edu\unifei\ecoe18\got\dao\MuralhaDAO.class
+br\edu\unifei\ecoe18\got\bean\DragaoBean.class
 br\edu\unifei\ecoe18\got\dao\CasteloDAO.class
 br\edu\unifei\ecoe18\got\modelo\Unidade.class
 br\edu\unifei\ecoe18\got\modelo\Nobre.class
 br\edu\unifei\ecoe18\got\modelo\Cavalo.class
+br\edu\unifei\ecoe18\got\bean\GuerraBean.class
 br\edu\unifei\ecoe18\got\dao\TransformacaoDAO.class
 br\edu\unifei\ecoe18\got\modelo\Continente.class
 br\edu\unifei\ecoe18\got\modelo\RacaCavaloEnum.class
