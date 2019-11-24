@@ -9,7 +9,9 @@ import javax.faces.context.FacesContext;
 import javax.inject.Named;
 
 import br.edu.unifei.ecoe18.got.dao.GrupoDAO;
+import br.edu.unifei.ecoe18.got.dao.SerDAO;
 import br.edu.unifei.ecoe18.got.modelo.Grupo;
+import br.edu.unifei.ecoe18.got.modelo.Ser;
 import lombok.Data;
 
 @Data
@@ -19,6 +21,9 @@ public class GrupoBean implements Serializable{
 	private static final long serialVersionUID = -7952197974725096682L;
 	private Grupo grupo = new Grupo();
 	private GrupoDAO grupoDAO = new GrupoDAO();
+	
+	private SerDAO serDAO = new SerDAO();
+	private List<Ser> seres = serDAO.findAll();
 	
 	public String inserir() {
 		try {

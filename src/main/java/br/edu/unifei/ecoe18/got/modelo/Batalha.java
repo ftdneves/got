@@ -24,7 +24,7 @@ public class Batalha implements Serializable{
 	private String local;
 	private String resultado;
 	@OneToMany
-	private List<Grupo> grupos = new ArrayList<>(2);
+	private List<Grupo> grupos = new ArrayList<>();
 	@OneToOne
 	private Grupo vencedor;
 	

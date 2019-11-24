@@ -37,6 +37,7 @@ D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\modelo\Casa.java
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\modelo\Ser.java
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\dao\CavaleiroDAO.java
+D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\bean\GrupoBean.java
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\bean\BatalhaBean.java
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\dao\BatalhaDAO.java
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\dao\PlebeuDAO.java
@@ -44,6 +45,7 @@ D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\modelo\Batalha.java
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\modelo\Castelo.java
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\modelo\Wight.java
+D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\bean\PlebeuBean.java
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\modelo\Cavalo.java
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\dao\SerDAO.java
 D:\Fred\OneDrive\Unifei\2019.2\ECOE18\got\src\main\java\br\edu\unifei\ecoe18\got\modelo\Humano.java

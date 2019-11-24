@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="../template.xhtml">
+	<ui:define name="title">CRUD Guerra - Inserir</ui:define>
+	<ui:define name="page-content">
+	<h:form>
+	<div class="box">
+		<a class="main-form">Causas:</a> <br/>
+		 <h:inputText value="#{guerraBean.guerra.causas}" size="25"/><br/>
+		<a class="main-form">Resultado:</a> <br/>
+		 <h:inputText value="#{guerraBean.guerra.resultado}" size="25"/><br/>
+		<a class="main-form">Vitorioso:</a> <br/> 
+		  <p:selectOneMenu value="#{guerraBean.grupoVitorioso}" >
+		  	<f:selectItems value="#{guerraBean.grupos}" var="g" itemValue="#{g.codigo}" itemLabel="#{g.motivacao}"/>
+		  </p:selectOneMenu> <br/>  
+		<a class="main-form">Batalhas:</a> <br/> 
+		  <p:selectCheckboxMenu value="#{guerraBean.guerra.batalhas}" multiple="true" filter="true" filterMatchMode="startsWith">
+		  	<f:selectItems value="#{guerraBean.batalhas}" var="b" itemValue="#{b}" itemLabel="#{b.data}"/>
+		  </p:selectCheckboxMenu> <br/>
+		<p><h:commandButton value="Inserir" class="button" action="#{guerraBean.inserir}"/></p>
+		<p><h:messages/></p>
+	</div>	
+	</h:form>
+	</ui:define>	
+</ui:composition>
+</html>

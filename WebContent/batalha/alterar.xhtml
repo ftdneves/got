@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="../template.xhtml">
+	<ui:define name="title">CRUD Batalha - Alterar</ui:define>
+	<ui:define name="page-content">
+	<h:form>
+	<div class="box">
+		<a class="main-form">Data:</a> <br/>
+		 <h:inputText value="#{batalhaBean.batalha.data}" size="25" readonly="true"/><br/>
+		 <h:inputHidden value="#{batalhaBean.batalha.data}" />
+		<a class="main-form">Local:</a> <br/> 
+		  <h:inputText value="#{batalhaBean.batalha.local}" size="25"/><br/>
+		<a class="main-form">Resultado:</a> <br/> 
+		  <h:inputText value="#{batalhaBean.batalha.resultado}" size="25"/><br/>
+		<a class="main-form">Vencedor:</a> <br/> 
+		  <p:selectOneMenu value="#{batalhaBean.grupoVencedor}" >
+		  	<f:selectItems value="#{batalhaBean.grupos}" var="g" itemValue="#{g.codigo}" itemLabel="#{g.motivacao}"/>
+		  </p:selectOneMenu> <br/>  
+<!-- 		  <h:inputHidden value="#{batalhaBean.grupoVencedor}"/> -->
+		<a class="main-form">Grupos:</a> <br/> 
+		  <p:selectCheckboxMenu value="#{batalhaBean.batalha.grupos}" label="Grupos" filter="true" filterMatchMode="startsWith">
+		  	<f:selectItems value="#{batalhaBean.grupos}" var="g" itemValue="#{g}" itemLabel="#{g.motivacao}"/>
+		  </p:selectCheckboxMenu> <br/>
+		<p><h:commandButton value="Alterar" class="button" action="#{batalhaBean.alterar}"/></p>
+		<p><h:messages/></p>
+	</div>	
+	</h:form>
+	</ui:define>	
+</ui:composition>
+</html>

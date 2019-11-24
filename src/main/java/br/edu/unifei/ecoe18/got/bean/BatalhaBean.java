@@ -22,11 +22,14 @@ public class BatalhaBean implements Serializable{
 	private Batalha batalha = new Batalha();
 	private BatalhaDAO batalhaDAO = new BatalhaDAO();
 	private GrupoDAO grupoDAO = new GrupoDAO();
-	private Grupo vencedor = new Grupo();
+	private Integer grupoVencedor;
 	private List<String> codigosGrupos = grupoDAO.codigos();
 	private List<Grupo> grupos = grupoDAO.findAll();
 	
 	public String inserir() {
+		if(grupoVencedor!=null) {
+			batalha.setVencedor(grupoDAO.find(grupoVencedor));
+		}
 		try {
 			batalhaDAO.create(batalha);
 		}catch (Exception e) {
@@ -41,7 +44,7 @@ public class BatalhaBean implements Serializable{
 		batalha=batalhaDAO.find(batalha.getData());
 		if(batalha==null) {
 			FacesContext facesContext = FacesContext.getCurrentInstance();
-			facesContext.addMessage(null, new FacesMessage("não encontrado"));
+			facesContext.addMessage(null, new FacesMessage("Não encontrado!"));
 			return "buscar";
 		}else {
 			return "consultar";
@@ -52,7 +55,7 @@ public class BatalhaBean implements Serializable{
 		batalha=batalhaDAO.find(batalha.getData());
 		if(batalha==null) {
 			FacesContext facesContext = FacesContext.getCurrentInstance();
-			facesContext.addMessage(null, new FacesMessage("não encontrado"));
+			facesContext.addMessage(null, new FacesMessage("Não encontrado!"));
 			return "buscar";
 		}else {
 			return "alterar";
@@ -71,6 +74,9 @@ public class BatalhaBean implements Serializable{
 	}
 	
 	public String alterar() {
+		if(grupoVencedor!=null) {
+			batalha.setVencedor(grupoDAO.find(grupoVencedor));
+		}
 		batalhaDAO.update(batalha);
 		return "/main-page";
 	}

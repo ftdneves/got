@@ -4,7 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
 
 <ui:composition template="../template.xhtml">
 	<ui:define name="title">CRUD Batalha - Consultar</ui:define>
@@ -18,13 +19,11 @@
 		<a class="main-form">Resultado:</a> <br/> 
 		  <h:inputText value="#{batalhaBean.batalha.resultado}" readonly="true"/><br/>
 		<a class="main-form">Vencedor:</a> <br/> 
-		  <h:selectOneMenu value="#{batalhaBean.batalha.vencedor}" disabled="true">
-		  	<f:selectItems value="#{batalhaBean.grupos}" var="g" itemValue="#{g}" itemLabel="#{g.codigo}"/>
-		  </h:selectOneMenu> <br/>  
+		  <h:inputText value="#{batalhaBean.batalha.vencedor.motivacao}" readonly="true"/><br/> 
 		<a class="main-form">Grupos:</a> <br/> 
-		  <h:selectManyCheckbox value="#{batalhaBean.batalha.grupos}" disabled="true">
-		  	<f:selectItems value="#{batalhaBean.grupos}" var="g" itemValue="#{g}" itemLabel="#{g.codigo}"/>
-		  </h:selectManyCheckbox> <br/>
+		  <ui:repeat var="g" value="#{batalhaBean.batalha.grupos}" >
+			<h:inputText value="#{g.motivacao}" readonly="true"/><br/> 
+   		  </ui:repeat>
 		<p><h:commandButton value="Home" class="button" action="#{batalhaBean.consultar}"/></p>
 	</div>	
 	</h:form>

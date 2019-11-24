@@ -10,6 +10,7 @@ br\edu\unifei\ecoe18\got\dao\LordeDAO.class
 br\edu\unifei\ecoe18\got\modelo\Construcao.class
 br\edu\unifei\ecoe18\got\modelo\Guerra.class
 br\edu\unifei\ecoe18\got\modelo\Ser.class
+br\edu\unifei\ecoe18\got\bean\GrupoBean.class
 br\edu\unifei\ecoe18\got\modelo\Rei.class
 br\edu\unifei\ecoe18\got\modelo\Muralha.class
 br\edu\unifei\ecoe18\got\dao\VilaDAO.class
@@ -49,6 +50,7 @@ br\edu\unifei\ecoe18\got\modelo\Continente.class
 br\edu\unifei\ecoe18\got\modelo\RacaCavaloEnum.class
 br\edu\unifei\ecoe18\got\dao\CasaDAO.class
 br\edu\unifei\ecoe18\got\modelo\Cidade.class
+br\edu\unifei\ecoe18\got\bean\PlebeuBean.class
 br\edu\unifei\ecoe18\got\modelo\Batalha.class
 br\edu\unifei\ecoe18\got\dao\CavaleiroDAO.class
 br\edu\unifei\ecoe18\got\modelo\Outro.class

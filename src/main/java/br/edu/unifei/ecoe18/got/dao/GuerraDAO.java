@@ -1,5 +1,7 @@
 package br.edu.unifei.ecoe18.got.dao;
 
-public class GuerraDAO extends AbstractDAO {
+import br.edu.unifei.ecoe18.got.modelo.Guerra;
+
+public class GuerraDAO extends AbstractDAO<Guerra,Integer> {
 
 }

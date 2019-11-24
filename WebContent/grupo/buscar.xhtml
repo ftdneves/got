@@ -4,18 +4,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
 
 <ui:composition template="../template.xhtml">
-	<ui:define name="title">CRUD Batalha - Buscar</ui:define>
+	<ui:define name="title">CRUD Grupo - Buscar</ui:define>
 	<ui:define name="page-content">
 	<h:form>
 	<div class="box">
-		<a class="main-form">Data:</a> <br/>
-		 <h:inputText value="#{batalhaBean.batalha.data}" size="25"/><br/>
-		<p><h:commandButton value="Consultar" class="button" action="#{batalhaBean.buscarConsultar}"/> <br/> <br/>
-		<h:commandButton value="Alterar" class="button" action="#{batalhaBean.buscarAlterar}"/> <br/> <br/>
-		<h:commandButton value="Excluir" class="button" action="#{batalhaBean.buscarExcluir}"/></p>
+		<a class="main-form">Código:</a> <br/>
+		 <h:inputText value="#{grupoBean.grupo.codigo}" size="25"/><br/>
+		<p><h:commandButton value="Consultar" class="button" action="#{grupoBean.buscarConsultar}"/> <br/> <br/>
+		<h:commandButton value="Alterar" class="button" action="#{grupoBean.buscarAlterar}"/> <br/> <br/>
+		<h:commandButton value="Excluir" class="button" action="#{grupoBean.buscarExcluir}"/></p>
 		<p><h:messages/></p>
 	</div>	
 	</h:form>

@@ -1,5 +1,7 @@
 package br.edu.unifei.ecoe18.got.dao;
 
-public class PlebeuDAO extends AbstractDAO {
+import br.edu.unifei.ecoe18.got.modelo.Plebeu;
+
+public class PlebeuDAO extends AbstractDAO<Plebeu,Integer> {
 
 }
