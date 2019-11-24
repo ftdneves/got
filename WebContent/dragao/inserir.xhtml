@@ -18,12 +18,22 @@
 		 <h:inputText value="#{dragaoBean.dragao.nascimento}" size="25"/><br/>
 		<a class="main-form">Está morto?</a> <br/>
 		 <p:selectBooleanCheckbox value="#{dragaoBean.dragao.morto}" /><br/>
-		<a class="main-form">Nome:</a> <br/>
-		 <h:inputText value="#{dragaoBean.dragao.nome}" size="25"/><br/>
-		<a class="main-form">Seres:</a> <br/> 
-		  <p:selectCheckboxMenu value="#{dragaoBean.dragao.seres}" multiple="true" filter="true" filterMatchMode="startsWith">
-		  	<f:selectItems value="#{dragaoBean.seres}" var="g" itemValue="#{g}" itemLabel="#{g.motivacao}"/>
-		  </p:selectCheckboxMenu> <br/>
+		<a class="main-form">Classe:</a> <br/>
+		 <h:inputText value="#{dragaoBean.dragao.classe}" size="25"/><br/>
+		<a class="main-form">Chifres:</a> <br/>
+		 <h:inputText value="#{dragaoBean.dragao.chifres}" size="25"/><br/>
+		<a class="main-form">Escamas:</a> <br/>
+		 <h:inputText value="#{dragaoBean.dragao.escamas}" size="25"/><br/>
+		<a class="main-form">Fogo:</a> <br/>
+		 <h:inputText value="#{dragaoBean.dragao.fogo}" size="25"/><br/>
+		<a class="main-form">Draconiano:</a> <br/> 
+		  <p:selectOneMenu value="#{dragaoBean.draconiano}" >
+		  	<f:selectItems value="#{dragaoBean.humanos}" var="h" itemValue="#{h.nome}" itemLabel="#{h.nome}"/>
+		  </p:selectOneMenu> <br/>  
+		<a class="main-form">Transformacao:</a> <br/> 
+		  <p:selectOneMenu value="#{dragaoBean.transformacao}" >
+		  	<f:selectItems value="#{dragaoBean.transformacoes}" var="h" itemValue="#{h.nome}" itemLabel="#{h.nome}"/>
+		  </p:selectOneMenu> <br/>  
 		<p><h:commandButton value="Inserir" class="button" action="#{dragaoBean.inserir}"/></p>
 		<p><h:messages/></p>
 	</div>	
