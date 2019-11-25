@@ -8,21 +8,23 @@
 	xmlns:p="http://primefaces.org/ui">
 
 <ui:composition template="../template.xhtml">
-	<ui:define name="title">CRUD Cavaleiro - Alterar</ui:define>
+	<ui:define name="title">CRUD Rei - Alterar</ui:define>
 	<ui:define name="page-content">
 	<h:form>
 	<div class="box">
 		<a class="main-form">Numero:</a> <br/>
-		 <h:inputText value="#{cavaleiroBean.cavaleiro.number}" size="25" readonly="true"/><br/>
-		 <h:inputHidden value="#{cavaleiroBean.cavaleiro.number}"/>
-		<a class="main-form">Tipo:</a> <br/>
-		 <h:inputText value="#{cavaleiroBean.cavaleiro.tipo}" size="25" /><br/>
-		 <a class="main-form">Mestre:</a> <br/> 
-		  <p:selectOneMenu value="#{cavaleiroBean.cavaleiro.mestre}" multiple="true" filter="true" filterMatchMode="startsWith">
+		 <h:inputText value="#{reiBean.rei.number}" size="25" readonly="true"/><br/>
+		 <h:inputHidden value="#{reiBean.rei.number}"/>
+		<a class="main-form">Reinado:</a> <br/>
+		 <h:inputText value="#{reiBean.rei.reinado}" size="25"/><br/>
+		 <a class="main-form">Reputacao:</a> <br/> 
+		  <p:inputNumber value="#{reiBean.rei.reputacao}" minValue="0" maxValue="10" decimalPlaces="2" /> <br/>
+		 <a class="main-form">Casa:</a> <br/> 
+		  <p:selectOneMenu value="#{reiBean.rei.casa}" multiple="true" filter="true" filterMatchMode="startsWith">
 		  	<f:selectItem itemValue="" itemLabel="Select One"/>
-		  	<f:selectItems value="#{cavaleiroBean.cavaleiros}" var="g" itemValue="#{g}" itemLabel="#{g.number}"/>
+		  	<f:selectItems value="#{reiBean.casas}" var="g" itemValue="#{g}" itemLabel="#{g.nome}"/>
 		  </p:selectOneMenu> <br/>
-		<p><h:commandButton value="Alterar" class="button" action="#{cavaleiroBean.alterar}"/></p>
+		<p><h:commandButton value="Alterar" class="button" action="#{reiBean.alterar}"/></p>
 		<p><h:messages/></p>
 	</div>	
 	</h:form>

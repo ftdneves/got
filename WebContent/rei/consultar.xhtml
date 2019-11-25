@@ -8,18 +8,20 @@
 	xmlns:p="http://primefaces.org/ui">
 
 <ui:composition template="../template.xhtml">
-	<ui:define name="title">CRUD Cavaleiro - Inserir</ui:define>
+	<ui:define name="title">CRUD Rei - Inserir</ui:define>
 	<ui:define name="page-content">
 	<h:form>
 	<div class="box">
 		<a class="main-form">Numero:</a> <br/>
-		 <h:inputText value="#{cavaleiroBean.cavaleiro.number}" size="25" readonly="true"/><br/>
-		 <h:inputHidden value="#{cavaleiroBean.cavaleiro.number}"/>
-		<a class="main-form">Tipo:</a> <br/>
-		 <h:inputText value="#{cavaleiroBean.cavaleiro.tipo}" size="25" readonly="true"/><br/>
-		 <a class="main-form">Mestre:</a> <br/> 
-		 <h:inputText value="#{cavaleiroBean.cavaleiro.mestre}" size="25" readonly="true"/><br/>
-		<p><h:commandButton value="Home" class="button" action="#{cavaleiroBean.consultar}"/></p>
+		 <h:inputText value="#{reiBean.rei.number}" size="25" readonly="true"/><br/>
+		 <h:inputHidden value="#{reiBean.rei.number}"/>
+		<a class="main-form">Reinado:</a> <br/>
+		 <h:inputText value="#{reiBean.rei.reinado}" size="25" readonly="true"/><br/>
+		 <a class="main-form">Reputacao:</a> <br/> 
+		  <p:inputNumber value="#{reiBean.rei.reputacao}" minValue="0" maxValue="10" decimalPlaces="2" readonly="true"/> <br/>
+		 <a class="main-form">Casa:</a> <br/> 
+		  <h:inputText value="#{reiBean.rei.casa}" size="25" readonly="true"/><br/>
+		<p><h:commandButton value="Home" class="button" action="#{reiBean.consultar}"/></p>
 		<p><h:messages/></p>
 	</div>	
 	</h:form>
