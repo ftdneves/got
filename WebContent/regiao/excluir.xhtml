@@ -16,11 +16,11 @@
 		 <h:inputText value="#{regiaoBean.regiao.nome}" readonly="true"/><br/>
 		 <h:inputHidden value="#{regiaoBean.regiao.nome}" />
 		<a class="main-form">Historia:</a> <br/> 
-		  <h:inputText value="#{regiaoBean.regiao.historia}" size="25"/><br/>
+		  <h:inputText value="#{regiaoBean.regiao.historia}" size="25" readonly="true"/><br/>
 		<a class="main-form">Geografia:</a> <br/> 
-		  <h:inputText value="#{regiaoBean.regiao.geografia}" size="25"/><br/>
+		  <h:inputText value="#{regiaoBean.regiao.geografia}" size="25" readonly="true"/><br/>
 		<a class="main-form">Economia:</a> <br/> 
-		  <h:inputText value="#{regiaoBean.regiao.economia}" size="25"/><br/>
+		  <h:inputText value="#{regiaoBean.regiao.economia}" size="25" readonly="true"/><br/>
 		<a class="main-form">Construções:</a> <br/> 
 		  <ui:repeat var="g" value="#{regiaoBean.regiao.construcoes}" >
 			<h:inputText value="#{g.nome}" readonly="true"/><br/> 

@@ -7,21 +7,20 @@ import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
 
-import br.edu.unifei.ecoe18.got.dao.PatrulheiroDAO;
-import br.edu.unifei.ecoe18.got.modelo.Patrulheiro;
+import br.edu.unifei.ecoe18.got.dao.CasteloDAO;
+import br.edu.unifei.ecoe18.got.modelo.Castelo;
 import lombok.Data;
 
 @Data
 @Named
 @RequestScoped
-public class PatrulheiroBean implements Serializable{
-	private static final long serialVersionUID = -2495061039165479091L;
-	private Patrulheiro patrulheiro = new Patrulheiro();
-	private PatrulheiroDAO patrulheiroDAO = new PatrulheiroDAO();
+public class CasteloBean implements Serializable{
+	private Castelo castelo = new Castelo();
+	private CasteloDAO casteloDAO = new CasteloDAO();
 	
 	public String inserir() {
 		try {
-			patrulheiroDAO.create(patrulheiro);
+			casteloDAO.create(castelo);
 		}catch (Exception e) {
 			FacesContext facesContext = FacesContext.getCurrentInstance();
 			facesContext.addMessage(null, new FacesMessage(e.toString()));
@@ -31,8 +30,8 @@ public class PatrulheiroBean implements Serializable{
 	}
 	
 	public String buscarConsultar() {
-		patrulheiro=patrulheiroDAO.find(patrulheiro.getNumber());
-		if(patrulheiro==null) {
+		castelo=casteloDAO.find(castelo.getNome());
+		if(castelo==null) {
 			FacesContext facesContext = FacesContext.getCurrentInstance();
 			facesContext.addMessage(null, new FacesMessage("Não encontrado!"));
 			return "buscar";
@@ -42,8 +41,8 @@ public class PatrulheiroBean implements Serializable{
 	}
 	
 	public String buscarAlterar() {
-		patrulheiro=patrulheiroDAO.find(patrulheiro.getNumber());
-		if(patrulheiro==null) {
+		castelo=casteloDAO.find(castelo.getNome());
+		if(castelo==null) {
 			FacesContext facesContext = FacesContext.getCurrentInstance();
 			facesContext.addMessage(null, new FacesMessage("Não encontrado!"));
 			return "buscar";
@@ -53,8 +52,8 @@ public class PatrulheiroBean implements Serializable{
 	}
 	
 	public String buscarExcluir() {
-		patrulheiro=patrulheiroDAO.find(patrulheiro.getNumber());
-		if(patrulheiro==null) {
+		castelo=casteloDAO.find(castelo.getNome());
+		if(castelo==null) {
 			FacesContext facesContext = FacesContext.getCurrentInstance();
 			facesContext.addMessage(null, new FacesMessage("não encontrado"));
 			return "buscar";
@@ -64,17 +63,16 @@ public class PatrulheiroBean implements Serializable{
 	}
 	
 	public String alterar() {
-		patrulheiroDAO.update(patrulheiro);
+		casteloDAO.update(castelo);
 		return "/main-page";
 	}
 	
 	public String excluir() {
-		patrulheiroDAO.deleteKey(patrulheiro.getNumber());
+		casteloDAO.deleteKey(castelo.getNome());
 		return "/main-page";
 	}
 	
 	public String consultar() {
 		return "/main-page";
-	}	
-
+	}
 }

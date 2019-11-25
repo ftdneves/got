@@ -1,5 +1,7 @@
 package br.edu.unifei.ecoe18.got.dao;
 
-public class FortalezaDAO extends AbstractDAO {
+import br.edu.unifei.ecoe18.got.modelo.Fortaleza;
+
+public class FortalezaDAO extends AbstractDAO<Fortaleza,String> {
 
 }
