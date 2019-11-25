@@ -8,31 +8,31 @@ import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
 
-import br.edu.unifei.ecoe18.got.dao.BatalhaDAO;
-import br.edu.unifei.ecoe18.got.dao.GrupoDAO;
-import br.edu.unifei.ecoe18.got.modelo.Batalha;
-import br.edu.unifei.ecoe18.got.modelo.Grupo;
+import br.edu.unifei.ecoe18.got.dao.ContinenteDAO;
+import br.edu.unifei.ecoe18.got.dao.RegiaoDAO;
+import br.edu.unifei.ecoe18.got.dao.UnidadeDAO;
+import br.edu.unifei.ecoe18.got.modelo.Continente;
+import br.edu.unifei.ecoe18.got.modelo.Regiao;
+import br.edu.unifei.ecoe18.got.modelo.Unidade;
 import lombok.Data;
 
 @Data
 @Named
 @RequestScoped
-public class BatalhaBean implements Serializable{
-	private static final long serialVersionUID = -8867020083955974855L;
-	private Batalha batalha = new Batalha();
-	private BatalhaDAO batalhaDAO = new BatalhaDAO();
+public class ContinenteBean implements Serializable{
+	private static final long serialVersionUID = -8224532103050185225L;
+	private Continente continente = new Continente();
+	private ContinenteDAO continenteDAO = new ContinenteDAO();
 	
-	private GrupoDAO grupoDAO = new GrupoDAO();
-	private Integer grupoVencedor;
-	private List<String> codigosGrupos = grupoDAO.codigos();
-	private List<Grupo> grupos = grupoDAO.findAll();
+	private UnidadeDAO unidadeDAO = new UnidadeDAO();
+	private List<Unidade> unidades = unidadeDAO.findAll();
+	
+	private RegiaoDAO regiaoDAO = new RegiaoDAO();
+	private List<Regiao> regioes = regiaoDAO.findAll();
 	
 	public String inserir() {
-		if(grupoVencedor!=null) {
-			batalha.setVencedor(grupoDAO.find(grupoVencedor));
-		}
 		try {
-			batalhaDAO.create(batalha);
+			continenteDAO.create(continente);
 		}catch (Exception e) {
 			FacesContext facesContext = FacesContext.getCurrentInstance();
 			facesContext.addMessage(null, new FacesMessage(e.toString()));
@@ -42,8 +42,8 @@ public class BatalhaBean implements Serializable{
 	}
 	
 	public String buscarConsultar() {
-		batalha=batalhaDAO.find(batalha.getData());
-		if(batalha==null) {
+		continente=continenteDAO.find(continente.getNome());
+		if(continente==null) {
 			FacesContext facesContext = FacesContext.getCurrentInstance();
 			facesContext.addMessage(null, new FacesMessage("Não encontrado!"));
 			return "buscar";
@@ -53,8 +53,8 @@ public class BatalhaBean implements Serializable{
 	}
 	
 	public String buscarAlterar() {
-		batalha=batalhaDAO.find(batalha.getData());
-		if(batalha==null) {
+		continente=continenteDAO.find(continente.getNome());
+		if(continente==null) {
 			FacesContext facesContext = FacesContext.getCurrentInstance();
 			facesContext.addMessage(null, new FacesMessage("Não encontrado!"));
 			return "buscar";
@@ -64,8 +64,8 @@ public class BatalhaBean implements Serializable{
 	}
 	
 	public String buscarExcluir() {
-		batalha=batalhaDAO.find(batalha.getData());
-		if(batalha==null) {
+		continente=continenteDAO.find(continente.getNome());
+		if(continente==null) {
 			FacesContext facesContext = FacesContext.getCurrentInstance();
 			facesContext.addMessage(null, new FacesMessage("não encontrado"));
 			return "buscar";
@@ -75,20 +75,16 @@ public class BatalhaBean implements Serializable{
 	}
 	
 	public String alterar() {
-		if(grupoVencedor!=null) {
-			batalha.setVencedor(grupoDAO.find(grupoVencedor));
-		}
-		batalhaDAO.update(batalha);
+		continenteDAO.update(continente);
 		return "/main-page";
 	}
 	
 	public String excluir() {
-		batalhaDAO.deleteKey(batalha.getData());
+		continenteDAO.deleteKey(continente.getNome());
 		return "/main-page";
 	}
 	
 	public String consultar() {
 		return "/main-page";
 	}	
-	
 }

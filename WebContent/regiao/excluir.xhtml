@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="../template.xhtml">
+	<ui:define name="title">CRUD Região - Excluir</ui:define>
+	<ui:define name="page-content">
+	<h:form>
+	<div class="box">
+		<a class="main-form">Nome:</a> <br/>
+		 <h:inputText value="#{regiaoBean.regiao.nome}" readonly="true"/><br/>
+		 <h:inputHidden value="#{regiaoBean.regiao.nome}" />
+		<a class="main-form">Historia:</a> <br/> 
+		  <h:inputText value="#{regiaoBean.regiao.historia}" size="25"/><br/>
+		<a class="main-form">Geografia:</a> <br/> 
+		  <h:inputText value="#{regiaoBean.regiao.geografia}" size="25"/><br/>
+		<a class="main-form">Economia:</a> <br/> 
+		  <h:inputText value="#{regiaoBean.regiao.economia}" size="25"/><br/>
+		<a class="main-form">Construções:</a> <br/> 
+		  <ui:repeat var="g" value="#{regiaoBean.regiao.construcoes}" >
+			<h:inputText value="#{g.nome}" readonly="true"/><br/> 
+   		  </ui:repeat>
+		<p><h:commandButton value="Excluir" class="button" action="#{regiaoBean.excluir}"/></p>
+	</div>	
+	</h:form>
+	</ui:define>	
+</ui:composition>
+</html>

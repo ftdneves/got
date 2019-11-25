@@ -1,5 +1,7 @@
 package br.edu.unifei.ecoe18.got.dao;
 
-public class RegiaoDAO extends AbstractDAO {
+import br.edu.unifei.ecoe18.got.modelo.Regiao;
+
+public class RegiaoDAO extends AbstractDAO<Regiao,String> {
 
 }

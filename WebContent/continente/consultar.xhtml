@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="../template.xhtml">
+	<ui:define name="title">CRUD Continente - Consultar</ui:define>
+	<ui:define name="page-content">
+	<h:form>
+	<div class="box">
+		<a class="main-form">Nome:</a> <br/>
+		 <h:inputText value="#{continenteBean.continente.nome}" readonly="true"/><br/>
+		<a class="main-form">Historia:</a> <br/> 
+		  <h:inputText value="#{continenteBean.continente.historia}" size="25" readonly="true"/><br/>
+		<a class="main-form">Fronteiras:</a> <br/> 
+		  <h:inputText value="#{continenteBean.continente.fronteiras}" size="25" readonly="true"/><br/>
+		<a class="main-form">Descrição:</a> <br/> 
+		  <h:inputText value="#{continenteBean.continente.descricao}" size="25" readonly="true"/><br/>
+		<a class="main-form">Unidades:</a> <br/> 
+		  <ui:repeat var="g" value="#{continenteBean.continente.unidades}" >
+			<h:inputText value="#{g.nome}" readonly="true"/><br/> 
+   		  </ui:repeat>
+		<a class="main-form">Regiões:</a> <br/> 
+		  <ui:repeat var="g" value="#{continenteBean.continente.regioes}" >
+			<h:inputText value="#{g.nome}" readonly="true"/><br/> 
+   		  </ui:repeat>
+		<p><h:commandButton value="Home" class="button" action="#{continenteBean.consultar}"/></p>
+	</div>	
+	</h:form>
+	</ui:define>	
+</ui:composition>
+</html>
