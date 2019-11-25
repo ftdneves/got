@@ -1,5 +1,7 @@
 package br.edu.unifei.ecoe18.got.dao;
 
-public class BastardoDAO extends AbstractDAO {
+import br.edu.unifei.ecoe18.got.modelo.Bastardo;
+
+public class BastardoDAO extends AbstractDAO<Bastardo,Integer> {
 
 }

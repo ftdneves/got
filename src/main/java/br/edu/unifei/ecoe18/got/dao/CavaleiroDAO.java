@@ -1,5 +1,7 @@
 package br.edu.unifei.ecoe18.got.dao;
 
-public class CavaleiroDAO extends AbstractDAO {
+import br.edu.unifei.ecoe18.got.modelo.Cavaleiro;
+
+public class CavaleiroDAO extends AbstractDAO<Cavaleiro,Integer> {
 
 }

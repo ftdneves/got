@@ -30,9 +30,9 @@
 		<a class="main-form">Capacidade de Reprodução:</a> <br/> 
 		  <h:inputText value="#{cavaloBean.cavalo.capacidadeReproducao}" size="25"  readonly="true"/> <br/>
 		<a class="main-form">Cavaleiro:</a> <br/> 
-		  <h:inputText value="#{cavaloBean.cavalo.cavaleiro}" size="25"  readonly="true"/> <br/> 
+		  <h:inputText value="#{cavaloBean.cavalo.cavaleiro.nome}" size="25"  readonly="true"/> <br/> 
 		<a class="main-form">Transformacao:</a> <br/> 
-		  <h:inputText value="#{cavaloBean.cavalo.transformacao}" size="25"  readonly="true"/> <br/>  
+		  <h:inputText value="#{cavaloBean.cavalo.transformacao.nome}" size="25"  readonly="true"/> <br/>  
 		<p><h:commandButton value="Home" class="button" action="#{cavaloBean.consultar}"/></p>
 		<p><h:messages/></p>
 	</div>	

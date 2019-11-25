@@ -8,13 +8,16 @@
 	xmlns:p="http://primefaces.org/ui">
 
 <ui:composition template="../template.xhtml">
-	<ui:define name="title">CRUD Plebeu - Inserir</ui:define>
+	<ui:define name="title">CRUD Dragão - Alterar</ui:define>
 	<ui:define name="page-content">
 	<h:form>
 	<div class="box">
-		<a class="main-form">Profissão:</a> <br/>
-		 <h:inputText value="#{plebeuBean.plebeu.profissao}" size="25"/><br/>
-		<p><h:commandButton value="Inserir" class="button" action="#{plebeuBean.inserir}"/></p>
+		<a class="main-form">Nome:</a> <br/>
+		 <h:inputText value="#{wightBean.wight.nome}" size="25" readonly="true"/><br/>
+		 <h:inputHidden value="#{wightBean.wight.nome}"/>
+		<a class="main-form">Estado de Decomposição:</a> <br/>
+		 <h:inputText value="#{wightBean.wight.estadoDecomposicao}" size="25"/><br/>
+		<p><h:commandButton value="Alterar" class="button" action="#{wightBean.alterar}"/></p>
 		<p><h:messages/></p>
 	</div>	
 	</h:form>

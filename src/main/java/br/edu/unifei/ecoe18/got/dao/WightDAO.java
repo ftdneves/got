@@ -1,5 +1,7 @@
 package br.edu.unifei.ecoe18.got.dao;
 
-public class WightDAO extends AbstractDAO {
+import br.edu.unifei.ecoe18.got.modelo.Wight;
+
+public class WightDAO extends AbstractDAO<Wight,String> {
 
 }

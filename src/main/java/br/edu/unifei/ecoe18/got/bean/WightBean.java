@@ -7,21 +7,21 @@ import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
 
-import br.edu.unifei.ecoe18.got.dao.PlebeuDAO;
-import br.edu.unifei.ecoe18.got.modelo.Plebeu;
+import br.edu.unifei.ecoe18.got.dao.WightDAO;
+import br.edu.unifei.ecoe18.got.modelo.Wight;
 import lombok.Data;
 
 @Data
 @Named
 @RequestScoped
-public class PlebeuBean implements Serializable{
-	private static final long serialVersionUID = -822337409651747313L;
-	private Plebeu plebeu = new Plebeu();
-	private PlebeuDAO plebeuDAO = new PlebeuDAO();
+public class WightBean implements Serializable{
+	private static final long serialVersionUID = 9163864015895045766L;
+	private Wight wight = new Wight();
+	private WightDAO wightDAO = new WightDAO();
 	
 	public String inserir() {
 		try {
-			plebeuDAO.create(plebeu);
+			wightDAO.create(wight);
 		}catch (Exception e) {
 			FacesContext facesContext = FacesContext.getCurrentInstance();
 			facesContext.addMessage(null, new FacesMessage(e.toString()));
@@ -31,8 +31,8 @@ public class PlebeuBean implements Serializable{
 	}
 	
 	public String buscarConsultar() {
-		plebeu=plebeuDAO.find(plebeu.getNumber());
-		if(plebeu==null) {
+		wight=wightDAO.find(wight.getNome());
+		if(wight==null) {
 			FacesContext facesContext = FacesContext.getCurrentInstance();
 			facesContext.addMessage(null, new FacesMessage("Não encontrado!"));
 			return "buscar";
@@ -42,8 +42,8 @@ public class PlebeuBean implements Serializable{
 	}
 	
 	public String buscarAlterar() {
-		plebeu=plebeuDAO.find(plebeu.getNumber());
-		if(plebeu==null) {
+		wight=wightDAO.find(wight.getNome());
+		if(wight==null) {
 			FacesContext facesContext = FacesContext.getCurrentInstance();
 			facesContext.addMessage(null, new FacesMessage("Não encontrado!"));
 			return "buscar";
@@ -53,8 +53,8 @@ public class PlebeuBean implements Serializable{
 	}
 	
 	public String buscarExcluir() {
-		plebeu=plebeuDAO.find(plebeu.getNumber());
-		if(plebeu==null) {
+		wight=wightDAO.find(wight.getNome());
+		if(wight==null) {
 			FacesContext facesContext = FacesContext.getCurrentInstance();
 			facesContext.addMessage(null, new FacesMessage("não encontrado"));
 			return "buscar";
@@ -64,17 +64,17 @@ public class PlebeuBean implements Serializable{
 	}
 	
 	public String alterar() {
-		plebeuDAO.update(plebeu);
+		wightDAO.update(wight);
 		return "/main-page";
 	}
 	
 	public String excluir() {
-		plebeuDAO.deleteKey(plebeu.getNumber());
+		wightDAO.deleteKey(wight.getNome());
 		return "/main-page";
 	}
 	
 	public String consultar() {
 		return "/main-page";
 	}	
-	
+
 }
