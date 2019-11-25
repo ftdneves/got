@@ -26,7 +26,7 @@ public class Muralha {
 	@OneToMany
 	private List<Patrulheiro> patrulheiros = new ArrayList<>();
 	@OneToMany
-	private List<Castelo> castelos = new ArrayList<Castelo>(19);
+	private List<Castelo> castelos = new ArrayList<Castelo>();
 	@OneToOne
 	private Patrulheiro senhorComandante;
 	

@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="../template.xhtml">
+	<ui:define name="title">CRUD Cavaleiro - Inserir</ui:define>
+	<ui:define name="page-content">
+	<h:form>
+	<div class="box">
+		<a class="main-form">Tipo:</a> <br/>
+		 <h:inputText value="#{cavaleiroBean.cavaleiro.tipo}" size="25"/><br/>
+		 <a class="main-form">Mestre:</a> <br/> 
+		  <p:selectOneMenu value="#{cavaleiroBean.cavaleiro.mestre}" multiple="true" filter="true" filterMatchMode="startsWith">
+		  	<f:selectItem itemValue="" itemLabel="Select One"/>
+		  	<f:selectItems value="#{cavaleiroBean.cavaleiros}" var="g" itemValue="#{g}" itemLabel="#{g.number}"/>
+		  </p:selectOneMenu> <br/>
+		<p><h:commandButton value="Inserir" class="button" action="#{cavaleiroBean.inserir}"/></p>
+		<p><h:messages/></p>
+	</div>	
+	</h:form>
+	</ui:define>	
+</ui:composition>
+</html>

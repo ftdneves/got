@@ -36,7 +36,7 @@
 		Properties properties = new Properties();
 		properties.setProperty("javax.persistence.schema-generation.database.action", "create");
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("gotPU", properties);
-		out.println("<div class=\"box\"> <a class=\"main-form\">Banco de Dados criado!!</a> </div>");
+		out.println("Banco de Dados criado!!");
 	%>
 </div>
 
