@@ -1,5 +1,7 @@
 package br.edu.unifei.ecoe18.got.dao;
 
-public class LordeDAO extends AbstractDAO {
+import br.edu.unifei.ecoe18.got.modelo.Lorde;
+
+public class LordeDAO extends AbstractDAO<Lorde,Integer> {
 
 }

@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="../template.xhtml">
+	<ui:define name="title">CRUD Nobre - Alterar</ui:define>
+	<ui:define name="page-content">
+	<h:form>
+	<div class="box">
+		<a class="main-form">Numero:</a> <br/>
+		 <h:inputText value="#{nobreBean.nobre.number}" size="25" readonly="true"/><br/>
+		 <h:inputHidden value="#{nobreBean.nobre.number}"/>
+		 <a class="main-form">Casa Lealdade:</a> <br/> 
+		  <p:selectOneMenu value="#{nobreBean.nobre.casaLealdade}" multiple="true" filter="true" filterMatchMode="startsWith">
+		  	<f:selectItem itemValue="" itemLabel="Select One"/>
+		  	<f:selectItems value="#{nobreBean.casas}" var="g" itemValue="#{g}" itemLabel="#{g.nome}"/>
+		  </p:selectOneMenu> <br/>
+		<p><h:commandButton value="Alterar" class="button" action="#{nobreBean.alterar}"/></p>
+		<p><h:messages/></p>
+	</div>	
+	</h:form>
+	</ui:define>	
+</ui:composition>
+</html>

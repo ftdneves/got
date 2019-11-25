@@ -36,7 +36,7 @@ public class HumanoBean implements Serializable{
 	private TransformacaoDAO transformacaoDAO = new TransformacaoDAO();
 	private List<Transformacao> transformacoes = transformacaoDAO.findAll();
 	
-	private String titulo;
+	private Integer titulo;
 	private TituloDAO tituloDAO = new TituloDAO();
 	private List<Titulo> titulos = tituloDAO.findAll();
 	
@@ -61,7 +61,10 @@ public class HumanoBean implements Serializable{
 		}
 		if(transformacao!=null) {
 			humano.setTransformacao(transformacaoDAO.find(transformacao));
-		}	
+		}
+		if(titulo!=null) {
+			humano.setTitulo(tituloDAO.find(titulo));
+		}
 		try {
 			humanoDAO.create(humano);
 		}catch (Exception e) {
@@ -118,6 +121,9 @@ public class HumanoBean implements Serializable{
 		}
 		if(transformacao!=null) {
 			humano.setTransformacao(transformacaoDAO.find(transformacao));
+		}
+		if(titulo!=null) {
+			humano.setTitulo(tituloDAO.find(titulo));
 		}	
 		humanoDAO.update(humano);
 		return "/main-page";

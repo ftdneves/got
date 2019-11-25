@@ -41,6 +41,11 @@
             <f:selectItem itemLabel="Select One" itemValue="" />
 		  	<f:selectItems value="#{humanoBean.cavalos}" var="h" itemValue="#{h.nome}" itemLabel="#{h.nome}"/>
 		  </p:selectOneMenu> <br/>  
+		<a class="main-form">Titulo:</a> <br/> 
+		  <p:selectOneMenu value="#{humanoBean.titulo}" >
+            <f:selectItem itemLabel="Select One" itemValue="" />
+		  	<f:selectItems value="#{humanoBean.titulos}" var="h" itemValue="#{h.number}" itemLabel="#{h.number}"/>
+		  </p:selectOneMenu> <br/> 
 		<a class="main-form">Transformacao:</a> <br/> 
 		  <p:selectOneMenu value="#{humanoBean.transformacao}" >
             <f:selectItem itemLabel="Select One" itemValue="" />

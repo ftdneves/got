@@ -7,27 +7,20 @@ import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
 
-import br.edu.unifei.ecoe18.got.dao.MeistreDAO;
-import br.edu.unifei.ecoe18.got.modelo.Meistre;
-import br.edu.unifei.ecoe18.got.modelo.MetaisElosColarEnum;
+import br.edu.unifei.ecoe18.got.dao.PatrulheiroDAO;
+import br.edu.unifei.ecoe18.got.modelo.Patrulheiro;
 import lombok.Data;
 
 @Data
 @Named
 @RequestScoped
-public class MeistreBean implements Serializable{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 7211738623840860339L;
-	private Meistre meistre = new Meistre();
-	private MeistreDAO meistreDAO = new MeistreDAO();
-
-	private MetaisElosColarEnum[] elos = MetaisElosColarEnum.values();
+public class PatrulheiroBean implements Serializable{
+	private Patrulheiro patrulheiro = new Patrulheiro();
+	private PatrulheiroDAO patrulheiroDAO = new PatrulheiroDAO();
 	
 	public String inserir() {
 		try {
-			meistreDAO.create(meistre);
+			patrulheiroDAO.create(patrulheiro);
 		}catch (Exception e) {
 			FacesContext facesContext = FacesContext.getCurrentInstance();
 			facesContext.addMessage(null, new FacesMessage(e.toString()));
@@ -37,8 +30,8 @@ public class MeistreBean implements Serializable{
 	}
 	
 	public String buscarConsultar() {
-		meistre=meistreDAO.find(meistre.getNumber());
-		if(meistre==null) {
+		patrulheiro=patrulheiroDAO.find(patrulheiro.getNumber());
+		if(patrulheiro==null) {
 			FacesContext facesContext = FacesContext.getCurrentInstance();
 			facesContext.addMessage(null, new FacesMessage("Não encontrado!"));
 			return "buscar";
@@ -48,8 +41,8 @@ public class MeistreBean implements Serializable{
 	}
 	
 	public String buscarAlterar() {
-		meistre=meistreDAO.find(meistre.getNumber());
-		if(meistre==null) {
+		patrulheiro=patrulheiroDAO.find(patrulheiro.getNumber());
+		if(patrulheiro==null) {
 			FacesContext facesContext = FacesContext.getCurrentInstance();
 			facesContext.addMessage(null, new FacesMessage("Não encontrado!"));
 			return "buscar";
@@ -59,8 +52,8 @@ public class MeistreBean implements Serializable{
 	}
 	
 	public String buscarExcluir() {
-		meistre=meistreDAO.find(meistre.getNumber());
-		if(meistre==null) {
+		patrulheiro=patrulheiroDAO.find(patrulheiro.getNumber());
+		if(patrulheiro==null) {
 			FacesContext facesContext = FacesContext.getCurrentInstance();
 			facesContext.addMessage(null, new FacesMessage("não encontrado"));
 			return "buscar";
@@ -70,16 +63,17 @@ public class MeistreBean implements Serializable{
 	}
 	
 	public String alterar() {
-		meistreDAO.update(meistre);
+		patrulheiroDAO.update(patrulheiro);
 		return "/main-page";
 	}
 	
 	public String excluir() {
-		meistreDAO.deleteKey(meistre.getNumber());
+		patrulheiroDAO.deleteKey(patrulheiro.getNumber());
 		return "/main-page";
 	}
 	
 	public String consultar() {
 		return "/main-page";
-	}
+	}	
+
 }
